@@ -1,0 +1,111 @@
+* {margin: 0; padding: 0;}
+
+/*nav-login*/
+.nav-log {
+    height: 80px;
+    width: 100%;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.nav-log a {
+    text-align: center;
+    padding: 12px;
+    color: #a0a3a7;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-log a:hover {
+    color: orange;
+    text-decoration: none;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .nav-log a {
+       font-size: 15px;
+       padding: auto;
+    }
+}
+
+/*Form login*/
+.tab {
+    display: flex;
+    BORDER:  1px solid #ccc;
+    background-color: #e71a0f;
+    height: 49px;
+}
+
+button.tablinks {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    font-weight: 600;
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+button.tablinks:hover {
+    background-color: black;
+}
+
+div#sign-in {
+    padding: 15px 12px 0px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+}
+
+button.btn.btn-primary.btn-block {
+    background-color: #e71a0f;
+    border: none;
+    cursor: pointer;
+}
+
+#link-forget {
+    text-align: center;
+    font-size: 12px;
+    display: block;
+    padding: 5px;
+}
+
+div#regis {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    padding: 15px 12px 15px;
+}
+
+
+
+.form-group > input {
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-size: 12px;
+}
+
+span {
+    color: red;
+}
+
+.f-radio {display: inline-block;margin-left: 1%;}
+
+.ko {
+   display: none;
+}
+
+.slide img {
+    max-width: 100%;
+    height: 500px;
+}
+
+
+.r-login {
+    align-self: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .l-slide {
+        display: none;
+    }
+}
