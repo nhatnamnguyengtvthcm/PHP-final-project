@@ -123,6 +123,8 @@ body {
 
 .rowSeat {
   display: flex;
+  width: 100%;
+
 }
 
 .screen {
@@ -132,7 +134,7 @@ body {
   margin: 35px 45px 45px;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
-  /* align-items: center; */
+ 
 }
 
 p.text {
