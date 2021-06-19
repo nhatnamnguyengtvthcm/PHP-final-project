@@ -36,7 +36,7 @@ for (productCard of productCardArr) {
     productCarDiv.className = "col-md-6 card-inner";
     productCarDiv.innerHTML = ` 
     <div class="image-combo">
-      <img class="card-img-top" src="image/${productCard.image}" alt="">
+      <img class="card-img-top" src="imageCombo/${productCard.image}" alt="">
       <div class="countItem">
       <div class="btnMinus"><i class="fas fa-minus-square itemIcon"></i></div>
       <div><input type="text" name="" value="0" class="countInput"></div>
@@ -88,5 +88,13 @@ document.querySelector('.btnOrderCancel').addEventListener('click',function(){
   },500)
   
 })
+// Extra product button
+var btnExtraCombo = document.querySelector('.btnExtraCombo');
+var modalx  = document.querySelector('.modalx');
+btnExtraCombo.addEventListener('click', function(){
+  document.querySelector('.modalx').classList.remove("closeModalxAnimation");
+  document.querySelector('.modalx').classList.remove("closeModalx");
+    modalx.classList.add("modalxChange");
+});
 
 

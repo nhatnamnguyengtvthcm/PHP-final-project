@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="col-md-6 card-inner">
                                         <div class="image-combo">
-                                            <img class="card-img-top" src="image/bt21.jpg" alt="">
+                                            <img class="card-img-top" src="imageCombo/bt21.jpg" alt="">
                                             <div class="countItem">
                                                 <div class="btnMinus"><i class="fas fa-minus-square itemIcon"></i>
                                                 </div>
