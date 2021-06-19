@@ -56,5 +56,13 @@ function changeColor() {
 
 // intial count and total
 changeColor();
+// Extra product button
+var btnExtraCombo = document.querySelector('.btnExtraCombo');
+var modalx  = document.querySelector('.modalx');
+btnExtraCombo.addEventListener('click', function(){
+  document.querySelector('.modalx').classList.remove("closeModalxAnimation");
+  document.querySelector('.modalx').classList.remove("closeModalx");
+    modalx.classList.add("modalxChange");
+});
 
 

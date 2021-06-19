@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('css/bookSeat.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/modalComboExtra.css') }}">
 
     <!-- Bootstrap CSS -->
 
@@ -18,120 +20,151 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <ul class="showcase">
-                    <li>
-                        <div class="icon"></div>
-                        <small>N/A</small>
-                    </li>
+            <div class="col-md-12">
+                <!-- Modal -->
+                <div class="modalx">
+                    <div class="modal__overlay">
+                    </div>
+                    <div class="modal__body">
+                        <div class="modal__inner">
+                            <div class="productCard__Arr">
+                                <div class="product-card">
+                                    <div class="col-md-12">
+                                        <div class="btnCloseCombo">
+                                            <i class="far fa-times-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 card-inner">
+                                        <div class="image-combo">
+                                            <img class="card-img-top" src="image/bt21.jpg" alt="">
+                                            <div class="countItem">
+                                                <div class="btnMinus"><i class="fas fa-minus-square itemIcon"></i>
+                                                </div>
 
-                    <li>
-                        <div class="selected-icon"></div>
-                        <small>Selected</small>
-                    </li>
-
-                    <li>
-                        <div class="seat occupied-icon"></div>
-                        <small>Occupied</small>
-                    </li>
-                </ul>
-                  <div class="col-md-8">
-                    <div class="screen"></div>
-                    <div id="containerStage">
-                        <div class="chooseSeat">
-                            <div class="rowSeat">
-                                <input class="seat" value="1A" readonly></input>
-                                <input class="seat" value="2A" readonly></input>
-                                <input class="seat" value="3A" readonly></input>
-                                <input class="seat" value="4A" readonly></input>
-                                <input class="seat" value="5A" readonly></input>
-                                <input class="seat" value="6A" readonly></input>
-                                <input class="seat" value="7A" readonly></input>
-                                <input class="seat" value="8A" readonly></input>
-                            </div>
-                            <div class="rowSeat">
-                                <input class="seat" value="1B" readonly></input>
-                                <input class="seat" value="2B" readonly></input>
-                                <input class="seat" value="3B" readonly></input>
-                                <input class="seat" value="4B" readonly></input>
-                                <input class="seat" value="5B" readonly></input>
-                                <input class="seat" value="6B" readonly></input>
-                                <input class="seat" value="7B" readonly></input>
-                                <input class="seat" value="8B" readonly></input>
-                            </div>
-    
-                            <div class="rowSeat">
-                                <input class="seat" value="1C" readonly></input>
-                                <input class="seat" value="2C" readonly></input>
-                                <input class="seat" value="3C" readonly></input>
-                                <input class="seat" value="4C" readonly></input>
-                                <input class="seat" value="5C" readonly></input>
-                                <input class="seat" value="6C" readonly></input>
-                                <input class="seat" value="7C" readonly></input>
-                                <input class="seat" value="8C" readonly></input>
-                            </div>
-    
-                            <div class="rowSeat">
-                                <input class="seat" value="1D" readonly></input>
-                                <input class="seat" value="2D" readonly></input>
-                                <input class="seat" value="3D" readonly></input>
-                                <input class="seat" value="4D" readonly></input>
-                                <input class="seat" value="5D" readonly></input>
-                                <input class="seat" value="6D" readonly></input>
-                                <input class="seat" value="7D" readonly></input>
-                                <input class="seat" value="8D" readonly></input>
-                            </div>
-    
-                            <div class="rowSeat">
-                                <input class="seat" value="1E" readonly></input>
-                                <input class="seat" value="2E" readonly></input>
-                                <input class="seat" value="3E" readonly></input>
-                                <input class="seat" value="4E" readonly></input>
-                                <input class="seat" value="5E" readonly></input>
-                                <input class="seat" value="6E" readonly></input>
-                                <input class="seat" value="7E" readonly></input>
-                                <input class="seat" value="8E" readonly></input>
-                            </div>
-    
-                            <div class="rowSeat">
-                                <input class="seat" value="1F" readonly></input>
-                                <input class="seat" value="2F" readonly></input>
-                                <input class="seat" value="3F" readonly></input>
-                                <input class="seat occupied" value="4F" readonly></input>
-                                <input class="seat" value="5F" readonly></input>
-                                <input class="seat" value="6F" readonly></input>
-                                <input class="seat" value="7F" readonly></input>
-                                <input class="seat" value="8F" readonly></input>
-                            </div>
-                        </div>
-                    </div><br>
-                </div>
-                <div class="col-md-12">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-                        Launch
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="modelId" style="min-width: 100%;">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                                <div><input type="text" name="" value="0" class="countInput"></div>
+                                                <div class="btnPlus"><i class="fas fa-plus-square itemIcon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-body-width">
+                                                <h5>CGV SNACK COMBO</h5>
+                                                <p>1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt
+                                                    **Phụ thu đổi sang vị bắp Phô mai**
+                                                    ***Nhận trong ngày xem phim***</p>
+                                                <h5>99000 VND</h5>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    Body
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save</button>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="btnCombo">
+                                            <button class="btnOrderCancel btn btn-warning">Cancel</button>
+                                            <button class="btnOrderSave btn btn-info">Save</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="col-md-8">
+                    <ul class="showcase">
+                        <li>
+                            <div class="icon"></div>
+                            <small>N/A</small>
+                        </li>
+
+                        <li>
+                            <div class="selected-icon"></div>
+                            <small>Selected</small>
+                        </li>
+
+                        <li>
+                            <div class="seat occupied-icon"></div>
+                            <small>Occupied</small>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" col-md-8">
+                    <div class="screen"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="chooseSeat">
+                        <div class="rowSeat">
+                            <input class="seat" value="1A" readonly></input>
+                            <input class="seat" value="2A" readonly></input>
+                            <input class="seat" value="3A" readonly></input>
+                            <input class="seat" value="4A" readonly></input>
+                            <input class="seat" value="5A" readonly></input>
+                            <input class="seat" value="6A" readonly></input>
+                            <input class="seat" value="7A" readonly></input>
+                            <input class="seat" value="8A" readonly></input>
+                        </div>
+                        <div class="rowSeat">
+                            <input class="seat" value="1B" readonly></input>
+                            <input class="seat" value="2B" readonly></input>
+                            <input class="seat" value="3B" readonly></input>
+                            <input class="seat" value="4B" readonly></input>
+                            <input class="seat" value="5B" readonly></input>
+                            <input class="seat" value="6B" readonly></input>
+                            <input class="seat" value="7B" readonly></input>
+                            <input class="seat" value="8B" readonly></input>
+                        </div>
+
+                        <div class="rowSeat">
+                            <input class="seat" value="1C" readonly></input>
+                            <input class="seat" value="2C" readonly></input>
+                            <input class="seat" value="3C" readonly></input>
+                            <input class="seat" value="4C" readonly></input>
+                            <input class="seat" value="5C" readonly></input>
+                            <input class="seat" value="6C" readonly></input>
+                            <input class="seat" value="7C" readonly></input>
+                            <input class="seat" value="8C" readonly></input>
+                        </div>
+
+                        <div class="rowSeat">
+                            <input class="seat" value="1D" readonly></input>
+                            <input class="seat" value="2D" readonly></input>
+                            <input class="seat" value="3D" readonly></input>
+                            <input class="seat" value="4D" readonly></input>
+                            <input class="seat" value="5D" readonly></input>
+                            <input class="seat" value="6D" readonly></input>
+                            <input class="seat" value="7D" readonly></input>
+                            <input class="seat" value="8D" readonly></input>
+                        </div>
+
+                        <div class="rowSeat">
+                            <input class="seat" value="1E" readonly></input>
+                            <input class="seat" value="2E" readonly></input>
+                            <input class="seat" value="3E" readonly></input>
+                            <input class="seat" value="4E" readonly></input>
+                            <input class="seat" value="5E" readonly></input>
+                            <input class="seat" value="6E" readonly></input>
+                            <input class="seat" value="7E" readonly></input>
+                            <input class="seat" value="8E" readonly></input>
+                        </div>
+
+                        <div class="rowSeat">
+                            <input class="seat" value="1F" readonly></input>
+                            <input class="seat" value="2F" readonly></input>
+                            <input class="seat" value="3F" readonly></input>
+                            <input class="seat occupied" value="4F" readonly></input>
+                            <input class="seat" value="5F" readonly></input>
+                            <input class="seat" value="6F" readonly></input>
+                            <input class="seat" value="7F" readonly></input>
+                            <input class="seat" value="8F" readonly></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btnExtraCombo btn btn-primary">Click here to buy more product</button>
                 </div>
             </div>
             <!-- Extra product -->
@@ -208,24 +241,28 @@
                         </div>
                     </div>
 
-
-                    <!-- Email input -->
-                    <div class="form-outline mb-2">
-                        <input type="email" id="form6Example5" class="form-control" />
-                        <label class="form-label" for="form6Example5">Email</label>
-                    </div>
-                    {{-- <!-- Number input -->
-          <div class="form-outline mb-2">
-            <input type="number" id="form6Example6" class="form-control" />
-            <label class="form-label" for="form6Example6">Phone</label>
-          </div> --}}
-
-                    <!-- Message input -->
+                         <!-- Message input -->
                     <div class="form-outline mb-2">
                         <textarea class="form-control" id="form6Example7" rows="6"></textarea>
                         <label class="form-label" for="form6Example7">Extra product</label>
                     </div>
 
+
+                    <!-- Total input -->
+                    <div class="row mb-2">
+                        <div class="col-md-9">
+                            <div class="form-outline">
+                                <input type="text" id="count" class="form-control" />
+                                <label class="form-label" for="form6Example1">Total Price</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-outline">
+                                <input type="text" id="form6Example2" class="form-control" value=" VND" readonly/>
+                                <label class="form-label" for="form6Example2">Unit</label>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Submit button -->
                     <button type="submit" class="btn btn-primary btn-block mb-2" onclick="changeColor()">Place
                         order</button>
@@ -233,7 +270,9 @@
             </div>
         </div>
     </div>
+
     <script src="{{ asset('js/bookSeat.js') }}"></script>
+    <script src="{{ asset('js/comboExtra.js') }}"></script>
 </body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

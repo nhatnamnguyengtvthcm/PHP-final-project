@@ -11,12 +11,12 @@ body {
   color: white;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   font-family: 'Lato', 'sans-serif';
 }
 
 .movie-container {
   margin: 20px 0;
+  position: relative;
 }
 
 .movie-container select {
@@ -30,10 +30,16 @@ body {
   -webkit-appearance: none;
   appearance: none;
 }
+.container{
+  margin-top: 10px;
+  align-items: center;
 
-.containerStage {
-  perspective: 1000px;
-  margin-bottom: 30px;
+
+}
+.chooseSeat{
+  display: block;
+  align-items: center;
+ 
 }
 
 .seat {
@@ -46,6 +52,20 @@ body {
   border-top-right-radius: 10px;
   text-align: center;
   
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+  align-items: center;
+  margin-bottom: 20px;
+width: 80%;
+margin-left: 12%;
+  
+  
+ 
 }
 .icon {
   background-color: #444451;
@@ -120,22 +140,16 @@ body {
 .showcase li small {
   margin-left: 10px;
 }
-
-.rowSeat {
-  display: flex;
-  width: 100%;
-
+.containerSeat{
+ display: block;
+ align-items: center;
+ text-align: center;
+}
+/* Extra Combo */
+.btnExtraCombo{
+  margin: 10px 0 0 85px;
 }
 
-.screen {
-  background-color: #fff;
-  height: 70px;
-  width: 100%;
-  margin: 35px 45px 45px;
-  transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
- 
-}
 
 p.text {
   margin: 5px 0;
@@ -143,4 +157,7 @@ p.text {
 
 p.text span {
   color: #6feaf6;
+}
+@media screen {
+  
 }
