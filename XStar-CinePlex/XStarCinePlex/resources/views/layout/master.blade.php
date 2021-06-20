@@ -1,261 +1,331 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-<title>Movies Pro an Entertainment Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
-<!-- for-mobile-apps -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Basic need -->
+    <title>Open Pediatrics</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="profile" href="#">
 
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+    <!-- Mobile specific meta -->
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone-no">
 
-
-
-<!-- //for-mobile-apps -->
-<link href="{{ asset('font_end/header_footer/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all"/>
-<!-- pop-up -->
-
-<!-- //pop-up -->
-<link href="{{ asset('font_end/header_footer/css/easy-responsive-tabs.css') }}" rel='stylesheet' type='text/css'/>
-<link rel="stylesheet" type="text/css" href="{{ asset('font_end/header_footer/css/zoomslider.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('font_end/header_footer/css/style.css') }}" />
-<link href="{{ asset('font_end/header_footer/css/font-awesome.css') }}" rel="stylesheet">
-<script type="text/javascript" src="{{ asset('font_end/header_footer/js/modernizr-2.6.2.min.js') }}"></script>
-<!--/web-fonts-->
-<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
-<link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<!--//web-fonts-->
-
-<!--Phuc boostrap-->
- <!-- Bootstrap CSS -->
- <link rel="stylesheet" href="{{ asset('font_end/Phuc/css/login.css') }}" type="text/css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/style.css') }}">
 </head>
-<body>
-
 
 <body>
-  <!--/banner-section-->
-	<div id="demo-1" data-zs-src='["{{ asset('font_end/header_footer/images/2.jpg') }}", "{{ asset('font_end/header_footer/images/1.jpg') }}", "{{ asset('font_end/header_footer/images/3.jpg') }}","{{ asset('font_end/header_footer/images/4.jpg')}}"]' data-zs-overlay="dots">
-		<div class="demo-inner-content">
-		<!--/header-w3l-->
-			   <div class="header-w3-agileits" id="home">
-			     <div class="inner-header-agile">
-				<nav class="navbar navbar-default">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<!-- 	 -->
-						<h1><a  href="index.html"><span>X</span>-STAR <span>CINEPLEX</span></a></h1>
-						<!-- <li><a href="#" class="login"  data-toggle="modal" data-target="#myModal4">Login</a></li>
-						<li><a href="#" class="login reg"  data-toggle="modal" data-target="#myModal5">Register</a></li> -->
-					</div>
-					<!-- navbar-header -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mov <b class="caret"></b></a>
-								<ul class="dropdown-menu multi-column columns-3">
-									<li>
-									<div class="col-sm-8">
-										<ul class="multi-column-dropdown">
-											<li><a href="genre.html">NOW SHOWING</a></li>
-											<li><a href="genre.html">COMMING SOON</a></li>
-										</ul>
-									</div>
-
-
-									<div class="clearfix"></div>
-									</li>
-								</ul>
-							</li>
-
-							</li>
-							<!-- <li><a href="list.html">A - z list</a></li> -->
-                            <li><a href="#">CINEMA/PRICE</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li><a href="{{ url('users/login_resgister') }}" class="login">Login</a></li>
-							<li><a href="#" class="login reg">Sign Out</a></li>
-						</ul>
-
-					</div>
-					<div class="clearfix"> </div>
-				</nav>
-					<div class="w3ls_search">
-									<div class="cd-main-header">
-										<ul class="cd-header-buttons">
-											<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
-										</ul> <!-- cd-header-buttons -->
-									</div>
-									<div id="cd-search" class="cd-search">
-										<form action="#" method="post">
-											<input name="Search" type="search" placeholder="Search...">
-										</form>
-									</div>
-								</div>
-
-			</div>
-
-			   </div>
-		<!--//header-w3l-->
-			<!--/banner-info-->
-			   <div class="baner-info">
-			      <h3>Latest <span>On</span>Line <span>Mo</span>vies</h3>
-				  <h4>In space no one can hear you scream.</h4>
-			   </div>
-			<!--/banner-ingo-->
-		</div>
+    <!--preloading-->
+    <div id="preloader">
+        <img class="logo" src="{{ asset('font_end/Nam/images/logo1.png') }}" alt="" width="119" height="58">
+        <div id="status">
+            <span></span>
+            <span></span>
+        </div>
     </div>
-  <!--/banner-section-->
- <!--//main-header-->
-    @yield('content')
-	<!--/footer-bottom-->
-	<div class="footer-cgv-container">
-		<div class="footer">
-			<div class="footer-brand-slide">
-				<div class="sect-smuse">
-					<ul>
-						<li><a class="dx" href="">4DX</a></li>
-						<li><a class="imax" href="">Imax</a></li>
-						<li><a class="starium" href="">Starium</a></li>
-						<li><a class="gold-class"
-								href="">Goldclass</a></li>
-						<li><a class="lamour" href="">L'amour</a></li>
-						<li><a class="sweet" href="">Sweetbox</a></li>
-						<li><a class="dolby-atmos" href="">Dolby
-								Atmos</a></li>
-						<li><a class="premium-cinema" href="">Premium
-								Cinema</a></li>
-						<li><a class="screenx" href="">Screenx</a></li>
-						<li><a class="cine-foret" href="">Cine &amp;
-								Foret</a></li>
-						<li><a class="cine-livingroom" href="">Cine
-								&amp; Living Room</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-cgv-policy">
-				<div class="content-cgv-policy">
-					<div class="cgv-vietnam">
-						<h3>CGV Việt Nam</h3>
-						<ul>
-							<li><a href="">Giới Thiệu</a></li>
-							<li><a href="">Tiện Ích Online</a></li>
-							<li><a href="">Thẻ Quà Tặng</a></li>
-							<li><a href="">Tuyển Dụng</a></li>
-							<li><a href="">Liên Hệ Quảng Cáo CGV</a></li>
-						</ul>
-					</div>
-					<div class="cgv-policy">
-						<h3>Điều khoản sử dụng</h3>
-						<ul>
-							<li><a href="">Điều Khoản Chung</a></li>
-							<li><a href="">       Điều Khoản Giao Dịch</a></li>
-							<li><a href="">  Chính Sách Thanh Toán</a></li>
-							<li><a href="">  Chính Sách Bảo Mật</a></li>
-							<li><a href="">             Câu Hỏi Thường Gặp</a></li>
-						</ul>
-					</div>
-					<div class="cgv-follow-us">
-						<h3>Kết nối với chúng tôi</h3>
-						<ul>
-							<li><a class="follow-fb" href="" target="_blank"></a>
-							</li>
-							<li><a class="follow-yt" href="" target="_blank"></a></li>
-							<li><a class="follow-instagram" href=""
-									target="_blank"></a></li>
-							<li><a class="follow-zalo" href="" target="_blank"></a></li>
-						</ul>
-						<div class="cgv-permision">
-							<h2><a href=""
-									target="_blank">cgv</a></h2>
-						</div>
-					</div>
-					<div class="customer-cgv">
-						<h3>Chăm sóc khách hàng</h3>
-						<p style="line-height: 22px; color:black">Hotline: 1900 6017<br>Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao
-							gồm cả Lễ Tết)<br>Email hỗ trợ: <a href="mailto:hoidap@cgv.vn">hoidap@cgv.vn</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="footer-cgv-address">
-				<div class="cgv-address-content">
-					<div class="logo-footer-cgv">&nbsp;</div>
-					<div class="text-cgv-address">
-						<h3>CÔNG TY TNHH CJ CGV VIETNAM</h3>
-						<p>Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày
-							14/10/2015, cấp bởi Sở KHĐT thành phố Hồ Chí Minh.</p>
-						<p>Địa Chỉ:&nbsp;Tầng 2, Rivera Park Saigon - Số 7/28 Thành Thái, P.14, Q.10, TPHCM.</p>
-						<p>Hotline: 1900 6017</p>
-						<p>COPYRIGHT 2017 CJ CGV. All RIGHTS RESERVED .</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!--end of preloading-->
+    <!--login form popup-->
+    <div class="login-wrapper" id="login-content">
+        <div class="login-content">
+            <a href="#" class="close">x</a>
+            <h3>Login</h3>
+            <form method="post" action="#">
+                <div class="row">
+                    <label for="username">
+                        Username:
+                        <input type="text" name="username" id="username" placeholder="Hugh Jackman"
+                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="password">
+                        Password:
+                        <input type="password" name="password" id="password" placeholder="******"
+                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            required="required" />
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="remember">
+                        <div>
+                            <input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+                        </div>
+                        <a href="#">Forget password ?</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <div class="row">
+                <p>Or via social</p>
+                <div class="social-btn-2">
+                    <a class="fb" href="#"><i class="ion-social-facebook"></i>Facebook</a>
+                    <a class="tw" href="#"><i class="ion-social-twitter"></i>twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of login form popup-->
+    <!--signup form popup-->
+    <div class="login-wrapper" id="signup-content">
+        <div class="login-content">
+            <a href="#" class="close">x</a>
+            <h3>sign up</h3>
+            <form method="post" action="#">
+                <div class="row">
+                    <label for="username-2">
+                        Username:
+                        <input type="text" name="username" id="username-2" placeholder="Hugh Jackman"
+                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label for="email-2">
+                        your email:
+                        <input type="password" name="email" id="email-2" placeholder=""
+                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            required="required" />
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="password-2">
+                        Password:
+                        <input type="password" name="password" id="password-2" placeholder=""
+                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            required="required" />
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="repassword-2">
+                        re-type Password:
+                        <input type="password" name="password" id="repassword-2" placeholder=""
+                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            required="required" />
+                    </label>
+                </div>
+                <div class="row">
+                    <button type="submit">sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--end of signup form popup-->
+
+    <!-- BEGIN | Header -->
+    <header class="ht-header">
+        <div class="container">
+            <nav class="navbar navbar-default navbar-custom">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header logo">
+                    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <div id="nav-icon1">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <a href="index-2.html"><img class="logo" src="{{ asset('font_end/Nam/images/logo1.png') }}" alt=""
+                            width="119" height="58"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav flex-child-menu menu-left">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="dropdown first">
+                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+                                Rạp <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu level1">
+                                <li><a hreft="">Tất cả các rạp</a></li>
+                                <li><a href="">Rạp đặc biệt</a></li>
+                                <li><a href="">Rạp sắp mở</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown first">
+                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                                Phim<i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu level1">
+                                <!-- <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phim sắp chiếu<i
+                                            class="ion-ios-arrow-forward"></i></a>
+                                    <ul class="dropdown-menu level2">
+                                        <li><a href="moviegrid.html">Phim sắp chiếu</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a href="moviesingle.html">Phim sắp chiếu</a></li>
+                                <li><a href="moviesingle.html">Phim đang chiếu</a></li>
+                                <!-- <li class="it-last"><a href="seriessingle.html">Series single</a></li> -->
+                            </ul>
+                        </li>
+                        <!-- <li class="dropdown first">
+                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                                celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu level1">
+                                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+                                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+                                <li><a href="celebritylist.html">celebrity list</a></li>
+                                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+                            </ul>
+                        </li> -->
+                        <li class="dropdown first">
+                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                                Thành Viên <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu level1">
+                                <li><a href="bloglist.html">Tài khoản</a></li>
+                                <li><a href="bloggrid.html">Quyền lợi</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown first">
+                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                                community <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu level1">
+                                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+                                <li><a href="userfavoritelist.html">user favorite list</a></li>
+                                <li><a href="userprofile.html">user profile</a></li>
+                                <li class="it-last"><a href="userrate.html">user rate</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav flex-child-menu menu-right">
+                        <!-- <li class="dropdown first">
+                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                                pages <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu level1">
+                                <li><a href="landing.html">Landing</a></li>
+                                <li><a href="404.html">404 Page</a></li>
+                                <li class="it-last"><a href="comingsoon.html">Coming soon</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="#">Vé của tôi</a></li>
+                        <!-- <li><a href="#">Help</a></li> -->
+                        <li class="loginLink"><a href="#">đăng nhập</a></li>
+                        <li class="btn signupLink"><a href="#">đăng kí</a></li>
+                    </ul>
+                    <!-- <div class="flex-child-menu menu-right">
+                        <button>Vé của tôi</button>
+                    </div> -->
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+
+            <!-- top search form -->
+            <div class="top-search">
+                <select>
+                    <option value="united">Movie</option>
+                    <option value="saab">Others</option>
+                </select>
+                <input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+            </div>
+        </div>
 
 
-<script src="{{ asset('font_end/header_footer/js/jquery-1.11.1.min.js') }}"></script>
-	<!-- Dropdown-Menu-JavaScript -->
-			<script>
-				$(document).ready(function(){
-					$(".dropdown").hover(
-						function() {
-							$('.dropdown-menu', this).stop( true, true ).slideDown("fast");
-							$(this).toggleClass('open');
-						},
-						function() {
-							$('.dropdown-menu', this).stop( true, true ).slideUp("fast");
-							$(this).toggleClass('open');
-						}
-					);
-				});
-			</script>
-		<!-- //Dropdown-Menu-JavaScript -->
+    </header>
+    <!-- END | Header -->
 
+    <div class="hero common-hero">
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <div class="hero-ct">
+                        <h1> blog detail</h1>
+                        <ul class="breadcumb">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li> <span class="ion-ios-arrow-right"></span> blog listing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- blog detail section-->
+    <div>
+                @yield('content')
 
-<script type="text/javascript" src="{{ asset('font_end/header_footer/js/jquery.zoomslider.min.js') }}"></script>
-		<!-- search-jQuery -->
-			<script src="{{ asset('font_end/header_footer/js/main.js') }}"></script>
-			<script src="{{ asset('font_end/header_footer/js/simplePlayer.js') }}"></script>
-			<script>
-				$("document").ready(function() {
-					$("#video").simplePlayer();
-				});
-			</script>
-			<script>
-				$("document").ready(function() {
-					$("#video1").simplePlayer();
-				});
-			</script>
-			<script>
-				$("document").ready(function() {
-					$("#video2").simplePlayer();
-				});
-			</script>
-				<script>
-				$("document").ready(function() {
-					$("#video3").simplePlayer();
-				});
-			</script>
+    </div>
+    <!-- end of  blog detail section-->
+    <!-- footer section-->
+    <footer class="ht-footer">
+        <div class="container">
+            <div class="flex-parent-ft">
+                <div class="flex-child-ft item1">
+                    <a href=""><img class="logo" src="{{ asset('font_end/Nam/images/images/logo1.png') }}"
+                            alt=""></a>
+                    <p>5th Avenue st, manhattan<br>
+                        New York, NY 10001</p>
+                    <p>Call us: <a href="#">(+01) 202 342 6789</a></p>
+                </div>
+                <div class="flex-child-ft item2">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blockbuster</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="flex-child-ft item3">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="flex-child-ft item4">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Watchlist</a></li>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">User Guide</a></li>
+                    </ul>
+                </div>
+                <div class="flex-child-ft item5">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
+                    <form action="#">
+                        <input type="text" placeholder="Enter your email...">
+                    </form>
+                    <a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="ft-copyright">
+            <div class="ft-left">
+                <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
+            </div>
+            <div class="backtotop">
+                <p><a href="#" id="back-to-top">Back to top <i class="ion-ios-arrow-thin-up"></i></a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer section-->
 
-<!--Phuc js, jquery vip-->
-<script type="text/javascript" src="{{ asset('font_end/Phuc/js/login.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-
+    <script src="{{ asset('font_end/Nam/js/jquery.js') }}"></script>
+    <script src="{{ asset('font_end/Nam/js/plugins.js') }}"></script>
+    <script src="{{ asset('font_end/Nam/js/plugins2.js') }}"></script>
+    <script src="{{ asset('font_end/Nam/js/custom.js') }}"></script>
 </body>
-
 
 </html>

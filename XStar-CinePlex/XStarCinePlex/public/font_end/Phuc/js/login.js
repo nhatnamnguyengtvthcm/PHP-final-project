@@ -10,6 +10,9 @@ login.classList.add('ko');
    tab[0].onclick = function() {
        login.classList.remove('ko');
       res.classList.add('ko');   }
-}, false)
+}, false);
+
+
+
 
 
