@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front_end\Phuc_registerLogin;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return view('users/main');
+    return view('layout.master');
 });
+
+
+//Route của front_end của Phuc
+Route::get('users/login_resgister', "Front_end\Generate_link@login");
+//Route backend của Phuc
+Route::post('users/register', "Front_end\Phuc_registerLogin@Register");

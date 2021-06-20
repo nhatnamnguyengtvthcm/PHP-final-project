@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Basic need -->
+
+
+
     <title>Open Pediatrics</title>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -25,7 +28,7 @@
 <body>
     <!--preloading-->
     <div id="preloader">
-        <img class="logo" src="{{ asset('font_end/images/logo1.png') }}" alt="" width="119" height="58">
+        <img class="logo" src="{{ asset('font_end/images/main-logo.jpg') }}" alt="" width="119" height="58">
         <div id="status">
             <span></span>
             <span></span>
@@ -136,7 +139,7 @@
                             <span></span>
                         </div>
                     </div>
-                    <a href="index-2.html"><img class="logo" src="{{ asset('font_end/images/logo1.png') }}" alt=""
+                    <a href="index-2.html"><img class="logo" src="{{ asset('font_end/images/main-logo.jpg') }}" alt=""
                             width="119" height="58"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -293,12 +296,12 @@
                     </ul>
                 </div>
                 <div class="flex-child-ft item4">
-                    <h4>Account</h4>
+                    <h4>tài khoản</h4>
                     <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Watchlist</a></li>
+                        <li><a href="#">Tài khoản của tôi</a></li>
+                        <!-- <li><a href="#">Watchlist</a></li>
                         <li><a href="#">Collections</a></li>
-                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">User Guide</a></li> -->
                     </ul>
                 </div>
                 <div class="flex-child-ft item5">
