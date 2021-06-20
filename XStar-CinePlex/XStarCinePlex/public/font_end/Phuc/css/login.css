@@ -103,7 +103,7 @@ span {
 .r-login {
     align-self: center;
 }
-
+.error{ color:red; }
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .l-slide {
         display: none;

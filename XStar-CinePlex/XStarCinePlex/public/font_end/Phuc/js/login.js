@@ -11,6 +11,88 @@ login.classList.add('ko');
        login.classList.remove('ko');
       res.classList.add('ko');   }
 }, false);
+        //function ajax
+        if ($('#loginForm').length > 0) {
+            $('#loginForm').validate({
+                rules: {
+                    textName: {
+                        required: true,
+                        maxlength: 50
+                    },
+                    textPhone: {
+                        required: true,
+                        digits: true,
+                        minlength:10,
+                        maxlength:12
+                    },
+                    textEmail: {
+                        required: true,
+                        maxlength: 50,
+                        email: true
+                    },
+                    textPassword: {
+                        required: true,
+                        minlength:6
+                    },
+                    textBirth: {
+                        required: true
+                    },
+                    gender: {
+                        required: true
+                    }
+                },
+                messages: {
+                    textName: {
+                        required: "Please enter your name",
+                        maxlength: "Your last name maxlength should be 50 character"
+                    },
+                    textPhone: {
+                        required: "Please enter your phone number",
+                        digits: "Please enter only numbers",
+                        minlength: "The phone number should be between 10 and 12 digits",
+                    },
+                    textEmail: {
+                        required: "Plesea enter your email",
+                        email: "Please enter valid email",
+                    },
+                    textPassword: {
+                        required: "Please enter your password",
+                        minlength: "Your passowrd must be min 6 chacreater",
+                    },
+                    textBirth: {
+                        required: "Please enter your BirthDay",
+                    },
+                    gender: {
+                        required: "Please choose your gender"
+                    }
+
+                },
+                submitHandler: function(form) {
+                    $.ajaxSetup({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }
+                    });
+                    $('#send_reg').html('Sending..');
+                    $.ajax({
+                        url: 'http://127.0.0.1:8000/users/register',
+                        type: 'POST',
+                        data: $('#loginForm').serialize(),
+                        success: function(response) {
+                            $('#send_reg').html('Sending..');
+                            $('#res_message').show();
+                            $('#res_message').html(response.msg);
+                            $('#msg_div').removeClass('d-none');
+                            document.getElementById('loginForm').reset();
+                            setTimeout(function(){
+                                $('#res_message').hide();
+                                $('#msg_div').hide();
+                            }, 10000);
+                        }
+                    });
+                }
+            })
+        }
 
 
 

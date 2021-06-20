@@ -18,223 +18,139 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
 
-    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/plugins.css') }}">
-    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/style.css') }}">
+    <!-- Bootstrap CSS Phuc -->
+    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/plugins.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/style.css') }}" type="text/css">
+    <!-- <link rel="stylesheet" href="{{ asset('font_end/Phuc/css/login.css') }}" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/bootstrap.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('font_end/Nam/css/my-style.css') }}" type="text/css">
+    <script src="{{ asset('font_end/Nam/js/bootstrap.min.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
+        integrity="sha512-MxCUiuI+uAXgr9Z9fxH1Y82CnqRrWySWqHejZyUMW55VJqL4trf9FXM/SiT7NQXZd4H0nJOr6FAAJTEjAmrm+A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!--preloading-->
     <div id="preloader">
-        <img class="logo" src="{{ asset('font_end/Nam/images/logo1.png') }}" alt="" width="119" height="58">
+        <img class="logo" src="{{ asset('font_end/Nam/images/main-logo.jpg') }}" alt="" width="119" height="58">
         <div id="status">
             <span></span>
             <span></span>
         </div>
     </div>
-    <!--end of preloading-->
-    <!--login form popup-->
-    <div class="login-wrapper" id="login-content">
-        <div class="login-content">
-            <a href="#" class="close">x</a>
-            <h3>Login</h3>
-            <form method="post" action="#">
-                <div class="row">
-                    <label for="username">
-                        Username:
-                        <input type="text" name="username" id="username" placeholder="Hugh Jackman"
-                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
-                    </label>
-                </div>
-
-                <div class="row">
-                    <label for="password">
-                        Password:
-                        <input type="password" name="password" id="password" placeholder="******"
-                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                            required="required" />
-                    </label>
-                </div>
-                <div class="row">
-                    <div class="remember">
-                        <div>
-                            <input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
-                        </div>
-                        <a href="#">Forget password ?</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <button type="submit">Login</button>
-                </div>
-            </form>
-            <div class="row">
-                <p>Or via social</p>
-                <div class="social-btn-2">
-                    <a class="fb" href="#"><i class="ion-social-facebook"></i>Facebook</a>
-                    <a class="tw" href="#"><i class="ion-social-twitter"></i>twitter</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end of login form popup-->
-    <!--signup form popup-->
-    <div class="login-wrapper" id="signup-content">
-        <div class="login-content">
-            <a href="#" class="close">x</a>
-            <h3>sign up</h3>
-            <form method="post" action="#">
-                <div class="row">
-                    <label for="username-2">
-                        Username:
-                        <input type="text" name="username" id="username-2" placeholder="Hugh Jackman"
-                            pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
-                    </label>
-                </div>
-
-                <div class="row">
-                    <label for="email-2">
-                        your email:
-                        <input type="password" name="email" id="email-2" placeholder=""
-                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                            required="required" />
-                    </label>
-                </div>
-                <div class="row">
-                    <label for="password-2">
-                        Password:
-                        <input type="password" name="password" id="password-2" placeholder=""
-                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                            required="required" />
-                    </label>
-                </div>
-                <div class="row">
-                    <label for="repassword-2">
-                        re-type Password:
-                        <input type="password" name="password" id="repassword-2" placeholder=""
-                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                            required="required" />
-                    </label>
-                </div>
-                <div class="row">
-                    <button type="submit">sign up</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!--end of signup form popup-->
 
     <!-- BEGIN | Header -->
     <header class="ht-header">
-        <div class="container">
-            <nav class="navbar navbar-default navbar-custom">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header logo">
-                    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <div id="nav-icon1">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+        <div class="container-fluid" style="width:auto">
+            <!-- Nam -->
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-collapse" style="width:100%; background-color::black">
+                    <div class="navbar-header logo">
+                        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <div id="nav-icon1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
                         </div>
+                        <a href="index-2.html"><img class="logo"
+                                src="{{ asset('font_end/Nam/images/main-logo.jpg') }}" alt="" width="119"
+                                height="58"></a>
                     </div>
-                    <a href="index-2.html"><img class="logo" src="{{ asset('font_end/Nam/images/logo1.png') }}" alt=""
-                            width="119" height="58"></a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav flex-child-menu menu-left">
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li class="dropdown first">
-                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
-                                Rạp <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu level1">
-                                <li><a hreft="">Tất cả các rạp</a></li>
-                                <li><a href="">Rạp đặc biệt</a></li>
-                                <li><a href="">Rạp sắp mở</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown first">
-                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                                Phim<i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu level1">
-                                <!-- <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Phim sắp chiếu<i
-                                            class="ion-ios-arrow-forward"></i></a>
-                                    <ul class="dropdown-menu level2">
-                                        <li><a href="moviegrid.html">Phim sắp chiếu</a></li>
-                                    </ul>
-                                </li> -->
-                                <li><a href="moviesingle.html">Phim sắp chiếu</a></li>
-                                <li><a href="moviesingle.html">Phim đang chiếu</a></li>
-                                <!-- <li class="it-last"><a href="seriessingle.html">Series single</a></li> -->
-                            </ul>
-                        </li>
-                        <!-- <li class="dropdown first">
-                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                                celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu level1">
-                                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
-                                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
-                                <li><a href="celebritylist.html">celebrity list</a></li>
-                                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
-                            </ul>
-                        </li> -->
-                        <li class="dropdown first">
-                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                                Thành Viên <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu level1">
-                                <li><a href="bloglist.html">Tài khoản</a></li>
-                                <li><a href="bloggrid.html">Quyền lợi</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown first">
-                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                                community <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu level1">
-                                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
-                                <li><a href="userfavoritelist.html">user favorite list</a></li>
-                                <li><a href="userprofile.html">user profile</a></li>
-                                <li class="it-last"><a href="userrate.html">user rate</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav flex-child-menu menu-right">
-                        <!-- <li class="dropdown first">
-                            <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                                pages <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                            <ul class="dropdown-menu level1">
-                                <li><a href="landing.html">Landing</a></li>
-                                <li><a href="404.html">404 Page</a></li>
-                                <li class="it-last"><a href="comingsoon.html">Coming soon</a></li>
-                            </ul>
-                        </li> -->
-                        <li><a href="#">Vé của tôi</a></li>
-                        <!-- <li><a href="#">Help</a></li> -->
-                        <li class="loginLink"><a href="#">đăng nhập</a></li>
-                        <li class="btn signupLink"><a href="#">đăng kí</a></li>
-                    </ul>
-                    <!-- <div class="flex-child-menu menu-right">
-                        <button>Vé của tôi</button>
-                    </div> -->
-                </div>
-                <!-- /.navbar-collapse -->
-            </nav>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-            <!-- top search form -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Rạp
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Tất cả các rạp</a>
+                                    <a class="dropdown-item" href="#">Rạp đặc biệt</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Phim đang chiếu</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Phim
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Phim đang chiếu</a>
+                                    <a class="dropdown-item" href="#">Phim sắp chiếu</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Thành viên
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Tài khoản</a>
+                                    <a class="dropdown-item" href="#">Quyền lợi</a>
+                            </li>
+                            <li><a class="nav-item nav-link" href="#">Vé của tôi</a></li>
+
+                            <button type="button" class="btn btn-success btn-rounded">Đăng nhập</button>
+                            <button type="button" class="btn btn-danger btn-rounded">Đăng kí</button>
+                            <!-- <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Tất cả các rạp</a>
+                                    <a class="dropdown-item" href="#">Rạp đặc biệt</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Phim đang chiếu</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li> -->
+                        </ul>
+
+                    </div>
+                </nav>
+                <!-- top search form -->
+
+                <!-- end search form -->
+            </div>
+            <!-- End Nam -->
             <div class="top-search">
                 <select>
                     <option value="united">Movie</option>
                     <option value="saab">Others</option>
                 </select>
                 <input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+
             </div>
+
+            <!-- <div class="top-search">
+                <select>
+                    <option value="united">Movie</option>
+                    <option value="saab">Others</option>
+                </select>
+                <input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+            </div> -->
         </div>
 
 
@@ -242,8 +158,8 @@
     <!-- END | Header -->
 
     <div class="hero common-hero">
-        <div class="container">
-            <!-- <div class="row">
+        <!-- <div class="container">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="hero-ct">
                         <h1> blog detail</h1>
@@ -253,22 +169,25 @@
                         </ul>
                     </div>
                 </div>
-            </div> -->
-        </div>
+            </div>
+        </div> -->
     </div>
     <!-- blog detail section-->
-    <div>
-                @yield('content')
 
-    </div>
+
+    <!------ this is contnet  ------>
+        @yield('content')
+    <!------ end contnet  ------>
+
+
+
     <!-- end of  blog detail section-->
     <!-- footer section-->
     <footer class="ht-footer">
         <div class="container">
             <div class="flex-parent-ft">
                 <div class="flex-child-ft item1">
-                    <a href=""><img class="logo" src="{{ asset('font_end/Nam/images/images/logo1.png') }}"
-                            alt=""></a>
+                    <!-- <a href=""><img class="logo" src="{{ asset('font_end/Nam/images/main-logo.png') }}" alt=""></a> -->
                     <p>5th Avenue st, manhattan<br>
                         New York, NY 10001</p>
                     <p>Call us: <a href="#">(+01) 202 342 6789</a></p>
@@ -293,12 +212,9 @@
                     </ul>
                 </div>
                 <div class="flex-child-ft item4">
-                    <h4>Account</h4>
+                    <h4>tài khoản</h4>
                     <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Watchlist</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">Tài khoản của tôi</a></li>
                     </ul>
                 </div>
                 <div class="flex-child-ft item5">
@@ -322,6 +238,25 @@
     </footer>
     <!-- end of footer section-->
 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!--Phuc-->
+    <script type="text/javascript" src="{{ asset('font_end/Phuc/js/login1.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('font_end/Phuc/js/login.js') }}"></script>
+
+
+    <!--Nam-->
     <script src="{{ asset('font_end/Nam/js/jquery.js') }}"></script>
     <script src="{{ asset('font_end/Nam/js/plugins.js') }}"></script>
     <script src="{{ asset('font_end/Nam/js/plugins2.js') }}"></script>

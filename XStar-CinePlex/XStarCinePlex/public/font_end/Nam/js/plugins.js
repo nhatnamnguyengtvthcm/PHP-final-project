@@ -1,6 +1,14 @@
 /*!
  * Dropdownhover v1.0.0 (http://bs-dropdownhover.kybarg.com)
  */
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 0) {
+    $('.top-search').fadeOut();
+  } else {
+    $('.top-search').fadeIn();
+  }
+});
 +function ($) {
   'use strict';
 
