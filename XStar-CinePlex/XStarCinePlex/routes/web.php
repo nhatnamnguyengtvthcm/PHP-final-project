@@ -16,7 +16,7 @@ use App\Http\Controllers\Front_end\Phuc_registerLogin;
 */
 
 Route::get('/', function () {
-    return view('layout.master');
+    return view('users/main');
 });
 
 
