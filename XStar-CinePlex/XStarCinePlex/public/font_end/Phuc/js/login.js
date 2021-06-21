@@ -1,4 +1,5 @@
 //Login-form
+
 document.addEventListener(
   "DOMContentLoaded",
   function () {
@@ -147,3 +148,4 @@ $("#loginForm").on("submit", function (event) {
     },
   });
 }); */
+

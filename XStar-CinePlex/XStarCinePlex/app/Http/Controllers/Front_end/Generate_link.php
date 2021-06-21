@@ -10,5 +10,6 @@ class Generate_link extends Controller
     //click login
     public function login() {
         return view('layout.master');
+
     }
 }

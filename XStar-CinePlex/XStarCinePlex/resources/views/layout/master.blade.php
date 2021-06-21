@@ -18,6 +18,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone-no">
 
+
     <!-- Bootstrap CSS Phuc -->
     <link rel="stylesheet" href="{{ asset('font_end/Nam/css/plugins.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('font_end/Nam/css/style.css') }}" type="text/css">
@@ -32,17 +33,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
         integrity="sha512-MxCUiuI+uAXgr9Z9fxH1Y82CnqRrWySWqHejZyUMW55VJqL4trf9FXM/SiT7NQXZd4H0nJOr6FAAJTEjAmrm+A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <!--preloading-->
     <div id="preloader">
+
         <img class="logo" src="{{ asset('font_end/Nam/images/main-logo.jpg') }}" alt="" width="119" height="58">
+
         <div id="status">
             <span></span>
             <span></span>
         </div>
     </div>
+
 
     <!-- BEGIN | Header -->
     <header class="ht-header">
@@ -135,12 +140,14 @@
                 <!-- end search form -->
             </div>
             <!-- End Nam -->
+
             <div class="top-search">
                 <select>
                     <option value="united">Movie</option>
                     <option value="saab">Others</option>
                 </select>
                 <input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
+
 
             </div>
 
@@ -151,6 +158,7 @@
                 </select>
                 <input type="text" placeholder="Search for a movie, TV Show or celebrity that you are looking for">
             </div> -->
+
         </div>
 
 
@@ -158,9 +166,10 @@
     <!-- END | Header -->
 
     <div class="hero common-hero">
+
         <!-- <div class="container">
             <div class="row">
-                <div class="col-md-12">
+
                     <div class="hero-ct">
                         <h1> blog detail</h1>
                         <ul class="breadcumb">
@@ -169,6 +178,7 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div> -->
     </div>
@@ -176,8 +186,9 @@
 
 
     <!------ this is contnet  ------>
-        @yield('content')
+    @yield('content')
     <!------ end contnet  ------>
+
 
 
 
@@ -187,7 +198,9 @@
         <div class="container">
             <div class="flex-parent-ft">
                 <div class="flex-child-ft item1">
+
                     <!-- <a href=""><img class="logo" src="{{ asset('font_end/Nam/images/main-logo.png') }}" alt=""></a> -->
+
                     <p>5th Avenue st, manhattan<br>
                         New York, NY 10001</p>
                     <p>Call us: <a href="#">(+01) 202 342 6789</a></p>
@@ -212,9 +225,11 @@
                     </ul>
                 </div>
                 <div class="flex-child-ft item4">
+
                     <h4>tài khoản</h4>
                     <ul>
                         <li><a href="#">Tài khoản của tôi</a></li>
+
                     </ul>
                 </div>
                 <div class="flex-child-ft item5">
@@ -237,6 +252,7 @@
         </div>
     </footer>
     <!-- end of footer section-->
+
 
 
     <!-- Optional JavaScript -->

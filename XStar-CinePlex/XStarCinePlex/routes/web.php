@@ -17,7 +17,9 @@ use App\Http\Controllers\Front_end\Phuc_registerLogin;
 Route::get('/', 'Front_end\Generate_link@login');
 
 
+
 //Route của front_end của Phuc
 Route::get('users/login_user', 'Front_end\Phuc_registerLogin@login');
 //Route backend của Phuc
 Route::post('register', 'Front_end\Phuc_registerLogin@Register');
+

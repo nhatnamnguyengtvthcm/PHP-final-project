@@ -21,7 +21,10 @@
     <!-- Bootstrap CSS Phuc -->
     <link rel="stylesheet" href="{{ asset('font_end/Nam/css/plugins.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('font_end/Nam/css/style.css') }}" type="text/css">
+
     <link rel="stylesheet" href="{{ asset('font_end/Phuc/css/login.css') }}" type="text/css">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -59,9 +62,11 @@
                                 <span></span>
                             </div>
                         </div>
+
                         <a href="index-2.html"><img class="logo"
                                 src="{{ asset('font_end/Nam/images/main-logo.jpg') }}" alt="" width="119"
                                 height="58"></a>
+
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -175,7 +180,9 @@
     <!-- blog detail section-->
 
 
+
     <!------ this is contnet  ------>
+
     <!--form-login-->
     <div class="form-login">
         <div class="container">
@@ -193,6 +200,7 @@
                                     <label for="exampleInputEmail1">Email or phone number</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp" placeholder="Email or phone number">
+
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                         anyone else.</small>
                                 </div>
@@ -206,6 +214,7 @@
                             </form>
                         </div>
                         <div class="register" id="regis">
+
                             <form action="javascript:void(0)" class="res-container ko" method="POST" id="loginForm"
                                 name="loginForm"">
                                 @csrf
@@ -304,13 +313,16 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     </div>
     <!------ end contnet  ------>
+
 
 
 
@@ -385,8 +397,10 @@
     </script>
 
     <!--Phuc-->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+
     <script type="text/javascript" src="{{ asset('font_end/Phuc/js/login.js') }}"></script>
 
 

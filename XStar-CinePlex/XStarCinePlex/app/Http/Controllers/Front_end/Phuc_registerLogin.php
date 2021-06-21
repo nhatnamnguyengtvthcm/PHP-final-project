@@ -4,12 +4,10 @@ namespace App\Http\Controllers\Front_end;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Validator;
 use Illuminate\Support\Facades\DB;
-
 class Phuc_registerLogin extends Controller
 {
-    //
+
      //click login
      public function login() {
         return view('users.login_user');
@@ -47,5 +45,6 @@ class Phuc_registerLogin extends Controller
             $arr = array('msg' => 'Successfull register account', 'status' => true);}
 
         return response()->json($arr);
+
     }
 }

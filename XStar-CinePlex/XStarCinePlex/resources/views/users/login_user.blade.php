@@ -6,8 +6,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+=======
+
+>>>>>>> main
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('font_end/Phuc/css/login.css') }}" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -48,56 +52,96 @@
                             </form>
                         </div>
                         <div class="register" id="regis">
+<<<<<<< HEAD
                             <form action="" class="res-container ko"
                                 id="loginForm" name="loginForm"">
+=======
+                            <form action="{{ url('users/register') }}" class="res-container ko" method="POST"
+                                id="loginForm">
+>>>>>>> main
                                 @csrf
                                 <div class="form-group">
                                     <label for="">Name</label>
                                     <span>*</span>
+<<<<<<< HEAD
                                     <input type="text" class="form-control" name="textName" id="textName"
                                         aria-describedby="helpId" placeholder="Name">
                                         <div class="alert-message" id="textNameError"></div>
                                   {{--   <span class="text-danger">{{ $errors->first('Name') }}</span> --}}
+=======
+                                    <input type="text" class="form-control" name="textName" id="reName"
+                                        aria-describedby="helpId" placeholder="Name">
+                                    <span class="text-danger error-text textName_error"></span>
+>>>>>>> main
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Phone number</label>
                                     <span>*</span>
+<<<<<<< HEAD
                                     <input type="text" class="form-control" name="textPhone" id="textPhone"
                                         aria-describedby="helpId" placeholder="Phone">
                                         <div class="alert-message" id="textPhoneError"></div>
+=======
+                                    <input type="text" class="form-control" name="textPhone" id="rePhone"
+                                        aria-describedby="helpId" placeholder="Phone">
+                                    <span class="text-danger error-text textPhone_error"></span>
+>>>>>>> main
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Email</label>
                                     <span>*</span>
+<<<<<<< HEAD
                                     <input type="email" class="form-control" name="textEmail" id="textEmail"
                                         aria-describedby="helpId" placeholder="Email">
                                         <div class="alert-message" id="textEmailError"></div>
+=======
+                                    <input type="email" class="form-control" name="textEmail" id="reMail"
+                                        aria-describedby="helpId" placeholder="Email">
+                                    <span class="text-danger error-text textEmail_error"></span>
+>>>>>>> main
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Password</label>
                                     <span>*</span>
+<<<<<<< HEAD
                                     <input type="password" class="form-control" name="textPassword" id="textPassword"
                                         aria-describedby="helpId" placeholder="Password">
                                         <div class="alert-message" id="textPasswordError"></div>
+=======
+                                    <input type="password" class="form-control" name="textPassword" id="rePass"
+                                        aria-describedby="helpId" placeholder="Password">
+                                    <span class="text-danger error-text textPassword_error"></span>
+>>>>>>> main
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Date of Birth</label>
                                     <span>*</span>
+<<<<<<< HEAD
                                     <input type="date" class="form-control" name="textBirth" id="textBirth"
                                         aria-describedby="helpId">
                                         <div class="alert-message" id="textBirth"></div>
+=======
+                                    <input type="date" class="form-control" name="textBirth" id="reBirth"
+                                        aria-describedby="helpId" value="1998-30-6">
+                                    <span class="text-danger error-text textBirth_error"></span>
+>>>>>>> main
                                 </div>
 
                                 <div class="form-group">
                                     <label for="">Gender</label>
                                     <span>*</span>
                                     <div class="f-radio">
+<<<<<<< HEAD
                                         <input type="radio" name="gender"> Female
                                         <input type="radio" name="gender"> Male
+=======
+                                        <input type="radio"> Female
+                                        <input type="radio"> Male
+>>>>>>> main
                                     </div>
                                 </div>
 
@@ -110,11 +154,13 @@
                                         <option>X-star Da Nang</option>
                                     </select>
                                 </div>
+
                                 <div class="alert alert-success d-none" id="msg_div">
                                     <span id="res_message"></span>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block res"
                                     id="send_reg">REGISTER</button>
+
                             </form>
                         </div>
                     </div>
@@ -164,8 +210,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/additional-methods.min.js"></script>
+
     <script type="text/javascript" src="{{ asset('font_end/Phuc/js/login.js') }}"></script>
 
 </body>
