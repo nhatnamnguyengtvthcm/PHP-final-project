@@ -101,7 +101,7 @@ var countInput = document.querySelectorAll(".countInput");
 var getValueCombo = document.querySelector(".getValueCombo");
 countInput.forEach((nutValueCombo,index)=>{
 btnOrderSave.onclick = function(){
-  getValueCombo.innerHTML = nutValueCombo.[value];
+  getValueCombo.innerHTML = nutValueCombo.value;
   console.log("XUyen");
 }
 });
