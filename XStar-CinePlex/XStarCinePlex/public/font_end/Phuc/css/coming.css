@@ -1,0 +1,133 @@
+* {margin: 0px; padding: 0px;}
+body {
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    color: #222;
+}
+
+.titleFilms h1 {
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+.now_showing{
+    margin-top: 30px;
+}
+.sub-caterory {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.sub-caterory a {
+    color: #666;
+    padding-left: 15px;
+    font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.titleFilms {
+    border-bottom: 3px solid #241d1e;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.film-imgs {
+    position: relative;
+}
+.film-img img {
+    height:260px;
+    width: 185px;
+    cursor: pointer;
+}
+
+.film-img {
+    max-width: 100%;
+    height: 260px;
+    border: 6px solid #000000;
+    display: inline-table;
+}
+
+.film-content {
+    width: 100%;
+    position: relative;
+    padding-bottom: 95px;
+    height: 137px;
+    min-height: 53px;
+}
+
+.film-name a{
+    color: #333 !important;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.film-name {
+    margin-bottom: 5px;
+}
+.film_items {
+    margin-bottom: 20px;
+}
+
+.infor-bold {
+    font-weight: bold;
+    font-size: 13px;
+}
+.infor-normal{
+    font-size: 14px;
+}
+.film_items.add-button {
+    float: left;
+    width: 100%;
+    margin: 7px 0px;
+}
+
+.add-button .button-like {
+    outline: none;
+    border-radius: 3px;
+    font-size: 11px;
+    height: 20px;
+    padding: 0 6px;
+    background: #4080ff;
+    border: 1px solid #4080ff;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 50%;
+}
+
+.add-button .button-like span{
+    text-align: justify;
+    color: white;
+    font-weight: 800;
+}
+
+
+/*Media querry*/
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .col-md-3.col-sm-6.col-xs-6.film_items {
+        max-width: 50%;
+    }
+
+    .film-img img {
+        height: auto;
+        width: 100%;
+    }
+    .film-img {
+        max-height: 100%;
+    }
+    .add-button.button-like {
+        max-width: 100%;
+        margin-left: 65%;
+    }
+    .add-button {
+        margin-top: 30px;
+    } 
+
+    .sub-caterory {
+        display: none;
+    }  
+}
