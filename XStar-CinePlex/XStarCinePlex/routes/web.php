@@ -18,9 +18,9 @@ use App\Http\Controllers\Front_end\Phuc_registerLogin;
 Route::get('/', function () {
     return view('users/main');
 });
-
-
+Route::get('reserve-seat','BookSeatController@bookSeat');
 //Route của front_end của Phuc
 Route::get('users/login_resgister', "Front_end\Generate_link@login");
 //Route backend của Phuc
 Route::post('users/register', "Front_end\Phuc_registerLogin@Register");
+
