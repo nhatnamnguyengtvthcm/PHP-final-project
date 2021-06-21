@@ -123,6 +123,7 @@ btnOrderSave.addEventListener('click',function(){
     sumTotalPrice += Number(totalItemPrice*totalItemValueLIndex);
     
     ItemComboArr.push(detailCombo);
+    
    }
   })
   getValueCombo.innerHTML = ItemComboArr.join(" - ");
