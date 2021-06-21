@@ -8,7 +8,7 @@ var productCardArr = [
   {
     title: "MILO COMBO 2021",
     description: "1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt **Phụ thu đổi sang vị bắp Phô mai** ***Nhận trong ngày xem phim***",
-    price: 99000,
+    price: 100000,
     image: "milo.png"
   },
   {
@@ -20,13 +20,19 @@ var productCardArr = [
   {
     title: "CGV COMBO",
     description: "1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt **Phụ thu đổi sang vị bắp Phô mai** ***Nhận trong ngày xem phim***",
-    price: 99000,
+    price: 80000,
     image: "shin.png"
   },
   {
     title: "MY COMBO",
     description: "1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt **Phụ thu đổi sang vị bắp Phô mai** ***Nhận trong ngày xem phim***",
     price: 99000,
+    image: "cheese.png"
+  },
+  {
+    title: "MY COMBO",
+    description: "1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt **Phụ thu đổi sang vị bắp Phô mai** ***Nhận trong ngày xem phim***",
+    price: 75000,
     image: "cheese.png"
   },
 ]
@@ -45,9 +51,10 @@ for (productCard of productCardArr) {
     </div>
     <div class="card-body">
       <div class="card-body-width">
-      <h5 getItemCombo>${productCard.title}</h5>
+      <h5 class = "getItemCombo">${productCard.title}</h5>
         <span>${productCard.description}</span>
-         <h5>${productCard.price} VND</h5>
+         <h5 class = "getItemPrice">${productCard.price}</h5>
+         <span>VND</span>
       </div>
     </div>`
 
@@ -95,20 +102,38 @@ btnExtraCombo.addEventListener('click', function () {
   document.querySelector('.modalx').classList.remove("closeModalx");
   modalx.classList.add("modalxChange");
 });
-// get detailCombo Extra
+// get detailCombo Extra and caculate total price
 var btnOrderSave = document.querySelector(".btnOrderSave");
 var countInput = document.querySelectorAll(".countInput");
 var getValueCombo = document.querySelector(".getValueCombo");
-var getItemCombo = document.querySelector(".getItemCombo").innerHTML;
+var getItemPrice = document.querySelectorAll(".getItemPrice");
+var getItemCombo = document.querySelectorAll(".getItemCombo");
+var showSumTotalPrice = document.querySelector(".showSumTotalPrice");
+var totalItemPrice = 0;
+var totalItemValueLIndex = 0;
+var sumTotalPrice = 0;
 var ItemComboArr = [];
 btnOrderSave.addEventListener('click',function(){
-  countInput.forEach((nutValueCombo,index)=>{
+  
+    countInput.forEach((nutValueCombo,index)=>{
    if(nutValueCombo.value >0){
-    var detailCombo = (nutValueCombo.value +" "+ getItemCombo).toString();
+    var detailCombo = nutValueCombo.value +" "+ getItemCombo[index].innerHTML;
+    totalItemPrice = Number(getItemPrice[index].innerHTML);
+    totalItemValueLIndex = Number(nutValueCombo.value);
+    sumTotalPrice += Number(totalItemPrice*totalItemValueLIndex);
+    
     ItemComboArr.push(detailCombo);
    }
   })
-  getValueCombo.innerText = ItemComboArr.join(" - ");
-  console.log("XUyen");
+  getValueCombo.innerHTML = ItemComboArr.join(" - ");
+  var pickingSeatLength = pickingSeat.length;
+  var getSumTotalPrice = sumTotalPrice + Number(pickingSeatLength*100000)
+  showSumTotalPrice.value = getSumTotalPrice.toLocaleString();
+ 
 })
+
+
+
+
+
 

@@ -34,29 +34,7 @@
                                             <i class="far fa-times-circle"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 card-inner">
-                                        <div class="image-combo">
-                                            <img class="card-img-top" src="imageCombo/bt21.jpg" alt="">
-                                            <div class="countItem">
-                                                <div class="btnMinus"><i class="fas fa-minus-square itemIcon"></i>
-                                                </div>
-
-                                                <div><input type="text" name="" value="0" class="countInput"></div>
-                                                <div class="btnPlus"><i class="fas fa-plus-square itemIcon"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-body-width">
-                                                <h5 class="getItemCombo">CGV SNACK COMBO</h5>
-                                                <p>1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt
-                                                    **Phụ thu đổi sang vị bắp Phô mai**
-                                                    ***Nhận trong ngày xem phim***</p>
-                                                <h5>99000 VND</h5>
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="btnCombo">
@@ -251,7 +229,7 @@
                     <div class="row mb-2">
                         <div class="col-md-9">
                             <div class="form-outline">
-                                <input type="text" id="count" class="form-control" />
+                                <input type="text" id="count" class="form-control showSumTotalPrice" readonly/>
                                 <label class="form-label" for="form6Example1">Total Price</label>
                             </div>
                         </div>
