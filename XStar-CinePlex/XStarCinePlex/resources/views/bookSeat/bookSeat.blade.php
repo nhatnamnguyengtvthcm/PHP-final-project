@@ -243,7 +243,7 @@
 
                          <!-- Message input -->
                     <div class="form-outline mb-2">
-                        <textarea class="form-control" id="form6Example7" rows="6"></textarea>
+                        <textarea class="form-control getValueCombo" id="form6Example7" rows="6"></textarea>
                         <label class="form-label" for="form6Example7">Extra product</label>
                     </div>
 
