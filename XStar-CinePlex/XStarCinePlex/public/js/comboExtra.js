@@ -45,7 +45,7 @@ for (productCard of productCardArr) {
     </div>
     <div class="card-body">
       <div class="card-body-width">
-      <h5>${productCard.title}</h5>
+      <h5 getItemCombo>${productCard.title}</h5>
         <span>${productCard.description}</span>
          <h5>${productCard.price} VND</h5>
       </div>
@@ -65,7 +65,6 @@ document.querySelectorAll('.btnPlus').forEach(plus => {
 });
 
 document.querySelectorAll('.btnMinus').forEach(minus => {
-  console.log(minus.nextSibling.nextSibling.firstChild);
   minus.addEventListener('click', (ev) => {
     if (minus.nextSibling.nextSibling.firstChild.value > 0)
       minus.nextSibling.nextSibling.firstChild.value--;
@@ -96,14 +95,20 @@ btnExtraCombo.addEventListener('click', function () {
   document.querySelector('.modalx').classList.remove("closeModalx");
   modalx.classList.add("modalxChange");
 });
+// get detailCombo Extra
 var btnOrderSave = document.querySelector(".btnOrderSave");
 var countInput = document.querySelectorAll(".countInput");
 var getValueCombo = document.querySelector(".getValueCombo");
-countInput.forEach((nutValueCombo,index)=>{
-btnOrderSave.onclick = function(){
-  getValueCombo.innerHTML = nutValueCombo.value;
+var getItemCombo = document.querySelector(".getItemCombo").innerHTML;
+var ItemComboArr = [];
+btnOrderSave.addEventListener('click',function(){
+  countInput.forEach((nutValueCombo,index)=>{
+   if(nutValueCombo.value >0){
+    var detailCombo = (nutValueCombo.value +" "+ getItemCombo).toString();
+    ItemComboArr.push(detailCombo);
+   }
+  })
+  getValueCombo.innerText = ItemComboArr.join(" - ");
   console.log("XUyen");
-}
-});
-
+})
 

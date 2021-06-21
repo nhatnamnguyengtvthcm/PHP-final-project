@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="card-body">
                                             <div class="card-body-width">
-                                                <h5>CGV SNACK COMBO</h5>
+                                                <h5 class="getItemCombo">CGV SNACK COMBO</h5>
                                                 <p>1 bắp Caramel lớn + 1 Milo hộp giấy + 1 nước ngọt
                                                     **Phụ thu đổi sang vị bắp Phô mai**
                                                     ***Nhận trong ngày xem phim***</p>
@@ -243,10 +243,9 @@
 
                          <!-- Message input -->
                     <div class="form-outline mb-2">
-                        <textarea class="form-control getValueCombo" id="form6Example7" rows="6"></textarea>
+                        <textarea class="form-control getValueCombo" id="form6Example7" rows="4"></textarea>
                         <label class="form-label" for="form6Example7">Extra product</label>
                     </div>
-
 
                     <!-- Total input -->
                     <div class="row mb-2">
@@ -264,7 +263,7 @@
                         </div>
                     </div>
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-2" onclick="changeColor()">Place
+                    <button type="submit" class="btn btn-primary btn-block mb-2">Place
                         order</button>
                 </form>
             </div>

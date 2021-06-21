@@ -43,19 +43,19 @@ containerSeat.addEventListener('click', (e) => {
 
   getValue.value = pickingSeat.toString();
 });
-function changeColor() {
-    const selectedSeats = document.querySelectorAll('.seat.selected');
-  if (selectedSeats !== null && selectedSeats.length > 0) {
-    seats.forEach((seat, index) => {
-      if (selectedSeats.indexOf(index) != -1) {
-        seat.classList.add('occupied');
-      }
-    })
-  }
-}
+// function changeColor() {
+//     const selectedSeats = document.querySelectorAll('.seat.selected');
+//   if (selectedSeats !== null && selectedSeats.length > 0) {
+//     seats.forEach((seat, index) => {
+//       if (selectedSeats.indexOf(index) != -1) {
+//         seat.classList.add('occupied');
+//       }
+//     })
+//   }
+// }
 
 // intial count and total
-changeColor();
+// changeColor();
 
 
 
