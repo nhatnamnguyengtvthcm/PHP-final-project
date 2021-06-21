@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Front_end;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use Validator;
 use Illuminate\Support\Facades\DB;
 
 class Phuc_registerLogin extends Controller
@@ -12,18 +12,17 @@ class Phuc_registerLogin extends Controller
     //
      //click login
      public function login() {
-        return view('users.login_resgiter');
+        return view('users.login_user');
     }
 
     public function Register(Request $request) {
         $role = 2;
-        $validator = Validator::make($request->all(),[
-            "textName" => 'required',
-            'textPhone' => 'required|unique:Phone',
-            'textEmail' => 'required|email|unique:Email',
+        request()->validate([
+            'textName'=> 'required',
+            'textEmail' => 'required|email|unique:account, Email',
             'textPassword' => 'required',
+            'textPhone' => 'required',
             'textBirth' => 'required',
-            'gender'  => 'required'
         ]);
         $name =  $request->input('textName');
         $phone = $request->input('textPhone');
@@ -32,7 +31,7 @@ class Phuc_registerLogin extends Controller
         $birth = $request->input('textBirth');
         $gender = $request->input('gender');
         $prefer = $request->input('textPrefer');
-        $querry = DB::table('account')->insert([
+        $data = DB::table('account')->insert([
             'Name'=> $name,
             'Email' => $email,
             'password' => $password,
@@ -43,10 +42,10 @@ class Phuc_registerLogin extends Controller
             'role'=> $role,
             'active'=>$role
         ]);
-        $arr = array('msg'=> 'Something goes to wrong. Please try agin later', 'status' => false);
-        if($querry) {
-            $arr = array('msg' => 'Successfull register account', 'status' => true);
-        }
-        return Response()->json($arr);
+       $arr = array('msg'=> 'Something goes to wrong. Please try agin later', 'status' => false);
+        if($data) {
+            $arr = array('msg' => 'Successfull register account', 'status' => true);}
+
+        return response()->json($arr);
     }
 }
