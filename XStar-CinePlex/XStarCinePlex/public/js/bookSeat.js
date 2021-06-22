@@ -9,7 +9,7 @@ let chooseSeat = seatSelect.value;
 
 // get data from localstorage and populate ui
 function populateUI() {
-    const selectedSeats = document.querySelectorAll('.row .seat.selected');
+  const selectedSeats = document.querySelectorAll('.row .seat.selected');
   if (selectedSeats !== null && selectedSeats.length > 0) {
     seats.forEach((seat, index) => {
       if (selectedSeats.indexOf(index) > -1) {
@@ -23,12 +23,12 @@ function populateUI() {
 var getValue = document.getElementById('pickingSeat');
 var pickingSeat = [];
 containerSeat.addEventListener('click', (e) => {
-     //Convert string to Number
+  //Convert string to Number
   var seatNumber = String(e.target.value);
   //find the seat in the array
   var pos = pickingSeat.indexOf(seatNumber);
 
- 
+
 
   //checking
   if (pos >= 0) {
@@ -38,7 +38,7 @@ containerSeat.addEventListener('click', (e) => {
   }
   if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
     e.target.classList.toggle('selected');
-       
+
   }
 
   getValue.value = pickingSeat.toString();
@@ -56,6 +56,16 @@ containerSeat.addEventListener('click', (e) => {
 
 // intial count and total
 // changeColor();
+// Regex Form
+var errorTime = document.querySelector(".errorTime");
+function formOrderTicket() {
+  if (document.formOrderTicket.hour.value == "-1") {
+    // errorTime.innerHTML = "Please choose time!"
+    alert("error")
+    return false;
+  }
+  return (true);
+}
 
 
 
