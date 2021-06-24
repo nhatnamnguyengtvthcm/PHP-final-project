@@ -7,7 +7,7 @@ const seatSelect = document.querySelectorAll('.rowSeat');
 populateUI();
 let chooseSeat = seatSelect.value;
 
-// get data from localstorage and populate ui
+//populate ui
 function populateUI() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
   if (selectedSeats !== null && selectedSeats.length > 0) {

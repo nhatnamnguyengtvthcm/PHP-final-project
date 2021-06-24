@@ -75,68 +75,18 @@
                 <div class="col-md-12">
                     <div class="chooseSeat">
                         <div class="rowSeat">
-                            <input class="seat" value="1A" readonly></input>
-                            <input class="seat" value="2A" readonly></input>
-                            <input class="seat" value="3A" readonly></input>
-                            <input class="seat" value="4A" readonly></input>
-                            <input class="seat" value="5A" readonly></input>
-                            <input class="seat" value="6A" readonly></input>
-                            <input class="seat" value="7A" readonly></input>
-                            <input class="seat" value="8A" readonly></input>
-                        </div>
-                        <div class="rowSeat">
-                            <input class="seat" value="1B" readonly></input>
-                            <input class="seat" value="2B" readonly></input>
-                            <input class="seat" value="3B" readonly></input>
-                            <input class="seat" value="4B" readonly></input>
-                            <input class="seat" value="5B" readonly></input>
-                            <input class="seat" value="6B" readonly></input>
-                            <input class="seat" value="7B" readonly></input>
-                            <input class="seat" value="8B" readonly></input>
-                        </div>
 
-                        <div class="rowSeat">
-                            <input class="seat" value="1C" readonly></input>
-                            <input class="seat" value="2C" readonly></input>
-                            <input class="seat" value="3C" readonly></input>
-                            <input class="seat" value="4C" readonly></input>
-                            <input class="seat" value="5C" readonly></input>
-                            <input class="seat" value="6C" readonly></input>
-                            <input class="seat" value="7C" readonly></input>
-                            <input class="seat" value="8C" readonly></input>
-                        </div>
-
-                        <div class="rowSeat">
-                            <input class="seat" value="1D" readonly></input>
-                            <input class="seat" value="2D" readonly></input>
-                            <input class="seat" value="3D" readonly></input>
-                            <input class="seat" value="4D" readonly></input>
-                            <input class="seat" value="5D" readonly></input>
-                            <input class="seat" value="6D" readonly></input>
-                            <input class="seat" value="7D" readonly></input>
-                            <input class="seat" value="8D" readonly></input>
-                        </div>
-
-                        <div class="rowSeat">
-                            <input class="seat" value="1E" readonly></input>
-                            <input class="seat" value="2E" readonly></input>
-                            <input class="seat" value="3E" readonly></input>
-                            <input class="seat" value="4E" readonly></input>
-                            <input class="seat" value="5E" readonly></input>
-                            <input class="seat" value="6E" readonly></input>
-                            <input class="seat" value="7E" readonly></input>
-                            <input class="seat" value="8E" readonly></input>
-                        </div>
-
-                        <div class="rowSeat">
-                            <input class="seat" value="1F" readonly></input>
-                            <input class="seat" value="2F" readonly></input>
-                            <input class="seat" value="3F" readonly></input>
-                            <input class="seat occupied" value="4F" readonly></input>
-                            <input class="seat" value="5F" readonly></input>
-                            <input class="seat" value="6F" readonly></input>
-                            <input class="seat" value="7F" readonly></input>
-                            <input class="seat" value="8F" readonly></input>
+                            @for ($i = 0; $i < 6; $i++)
+                                @for ($j = 0; $j < 8; $j++) <?php $seatNumber = $j + 1 . chr($i + 65); ?>
+                                     @if (in_array($seatNumber, $occupiedSeat))
+                                    <input class="seat occupied" value="{{ $seatNumber }}"
+                                    readonly>
+                                @else
+                                    <input class="seat" value="{{ $seatNumber }}"
+                                    readonly> @endif
+                            @endfor
+                            <br>
+                            @endfor
                         </div>
                     </div>
                 </div>
@@ -149,80 +99,48 @@
 
             <div class="col-md-5">
                 <h2 style="text-align: center;">ORDER INFORMATION</h2>
+
                 <form action="payment/payment-ticket" name="formOrderTicket" method="POST">
+                    <!-- Text input -->
                     @csrf
-                    <!-- 2 column grid layout with text inputs for the first and last names -->
-                    <div class="row mb-2">
-                        <div class="col">
-                            <div class="form-outline">
-                                <input type="text" name="email" class="form-control" />
-                                <label class="form-label" for="form6Example2">Your Email</label>
-                            </div>
-                        </div>
+                    <!-- Movie Title -->
+                    <div class="form-outline mb-2">
+                        <input type="text" name="movietitle" value="{{ $basicInfo['movietitle'] }}"
+                            class="form-control" readonly>
+                        <label class="form-label" for="form6Example7">Movie</label>
                     </div>
-                    <!-- 2 column grid layout with text inputs for movie name -->
+                    <!-- Address and Hour -->
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-md-7">
                             <div class="form-outline">
-                                <input type="text" name="movietitle" class="form-control"/>
-                                <label class="form-label" for="form6Example1">Movie</label>
+                                <input type="text" name="theatre" value="{{ $basicInfo['theatre'] }}"
+                                    class="form-control" readonly>
+                                <label class="form-label" for="form6Example1">Address</label>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Text input -->
-                    <div class="row mb-2">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="form-outline">
-                                <input type="text" id="pickingSeat" class="form-control" name="seat"/>
-                                <label class="form-label" for="form6Example1">Seat</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-outline mb-2">
-                                <select name="theatre" required class="form-control">
-                                    <option value="" disabled selected>THEATRE</option>
-                                    <option value="main-hall">Main Hall</option>
-                                    <option value="vip-hall">VIP Hall</option>
-                                    <option value="private-hall">Private Hall</option>
-                                </select>
-                                <label class="form-label" for="form6Example4">Address</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input -->
-
-                    <div class="row mb-2">
-                        <div class="col">
-                            <div class="form-outline">
-                                <select name="hour" class="form-control">
-                                    <option value="-1" selected>TIME</option>
-                                    <option value="09-00">09:00 AM</option>
-                                    <option value="12-00">12:00 AM</option>
-                                    <option value="15-00">03:00 PM</option>
-                                    <option value="18-00">06:00 PM</option>
-                                    <option value="21-00">09:00 PM</option>
-                                    <option value="24-00">12:00 PM</option>
-                                </select>
+                                <input type="text" name="hour" value="{{ $basicInfo['hour'] }}" class="form-control" readonly>
                                 <label class="form-label" for="form6Example2">Time</label>
-                                <span class="errorTime"></span>
                             </div>
                         </div>
-                        <div class="col">
+                    </div>
+                    <!-- Email and Date -->
+                    <div class="row mb-2">
+                        <div class="col-md-7">
                             <div class="form-outline">
-                                <select name="date" required class="form-control">
-                                    <option value="" disabled selected>DATE</option>
-                                    <option value="12-3">March 12,2019</option>
-                                    <option value="13-3">March 13,2019</option>
-                                    <option value="14-3">March 14,2019</option>
-                                    <option value="15-3">March 15,2019</option>
-                                    <option value="16-3">March 16,2019</option>
-                                </select>
+                                <input type="text" name="email" value="{{ $basicInfo['email'] }}"
+                                    class="form-control" readonly>
+                                <label class="form-label" for="form6Example1">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-outline">
+                                <input type="text" name="date" value="{{ $basicInfo['date'] }}" class="form-control" readonly>
                                 <label class="form-label" for="form6Example2">Date</label>
                             </div>
                         </div>
                     </div>
-
                     <!-- Message input -->
                     <div class="form-outline mb-2">
                         <textarea class="form-control getValueCombo" name="moreproduct" rows="4" readonly></textarea>
@@ -246,7 +164,7 @@
                     </div>
                     <!-- Submit button -->
                     <input type="submit" class="btn btn-primary btn-block mb-2">Place
-                        order</input>
+                    order</input>
                 </form>
             </div>
         </div>
