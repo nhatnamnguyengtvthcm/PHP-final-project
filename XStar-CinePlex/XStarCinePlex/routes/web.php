@@ -23,4 +23,8 @@ Route::get('reserve-seat','BookSeatController@bookSeat');
 Route::get('users/login_resgister', "Front_end\Generate_link@login");
 //Route backend của Phuc
 Route::post('users/register', "Front_end\Phuc_registerLogin@Register");
-
+// Hoang backend admin
+route::get('/dashboard','AdminController@show_dashboard');
+Route::get('/logout', 'AdminController@logout');
+//  Hoang Danh muc films
+Route::get('/add-film','FilmsController@add_film');
