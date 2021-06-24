@@ -9,6 +9,12 @@ class Generate_link extends Controller
 {
     //click login
     public function login() {
-        return view('users.login_resgiter');
+        return view('layout.master');
+
+    }
+
+    //link dan toi dashbord
+    public function dashboard() {
+        return view('admin.dasboard');
     }
 }
