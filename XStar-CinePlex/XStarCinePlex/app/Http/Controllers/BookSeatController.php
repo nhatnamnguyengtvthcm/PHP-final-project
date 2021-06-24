@@ -32,7 +32,7 @@ class BookSeatController extends Controller
         $occupiedSeatNames = [];
 
         foreach ($occupiedSeatCollection as $stdObj) {
-            $divideSeat = explode(',', $stdObj->SeatName);
+            $divideSeat = explode(',', $stdObj->Seat);
             // DD($divideSeat);
             array_push($occupiedSeatNames, ...$divideSeat);
         }
