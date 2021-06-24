@@ -20,18 +20,19 @@ Route::get('Logout', 'Front_end\Phuc_registerLogin@logOut');
 Route::post('user/register', 'Front_end\Phuc_registerLogin@Register');
 Route::post('user/login', 'Front_end\Phuc_registerLogin@checkLogin');
 Route::get('user/login_user', 'Front_end\Phuc_registerLogin@login');
-
-
-
-//Route của front_end của Phuc
-Route::prefix('user')->name('user')->middleware('chekLogin')->group(function(){
-
+Route::get('/', function () {
+    return view('users/main');
 });
-
-
-//Route backend admin cua Phuc
+//Route front_end của Xuyen
+// Route::get('reserve-seat','BookSeatController@bookSeat');
+Route::post('reserve-seat','BookSeatController@bookSeat')->name('postBookSeat');
 Route::prefix('admin')->name('admin')->middleware('checkAdmin')->group(function(){
     Route::get('/adminDashboard', 'Front_end\Generate_link@dashboard');
 });
-
+Route::get('users/login_resgister', "Front_end\Generate_link@login");
+//Route backend của Phuc
+Route::post('users/register', "Front_end\Phuc_registerLogin@Register");
+Route::post('payment/payment-ticket','BookSeatController@newBookTicket');
+Route::get('cenimainfo','CinemaController@CenimaInFor');
+//Route của front_end của Phuc
 
