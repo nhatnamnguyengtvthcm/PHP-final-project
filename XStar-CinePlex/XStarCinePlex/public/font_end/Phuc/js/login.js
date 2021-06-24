@@ -73,38 +73,45 @@ if ($("#loginForm").length > 0) {
         required: "Please choose your gender",
       },
     },
-      submitHandler: function(form) {
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
-                    $('#send_reg').html('Sending..');
-                    $.ajax({
-                        url: 'http://127.0.0.1:8000/register',
-                        type: 'Post',
-                        data: $('#loginForm').serialize(),
-                        success: function(response) {
-                            $('#send_reg').html('Register');
-                            $('#res_message').show();
-                            $('#res_message').html(response.msg);
-                            $('#msg_div').removeClass('d-none');
-                            document.getElementById('loginForm').reset();
-                            setTimeout(function(){
-                                $('#res_message').hide();
-                                $('#msg_div').hide();
-                            }, 10000);
-                        },
-                        error: function (error) {
-                            console.log(error.responseJSON.errors);
-                        },
-                      /*   error: function(response) {
-                            $('#res_message').show();
-                            $('#res_message').html(response.msg);
-                            $('#msg_div').removeClass('d-none');
-                        } */
-                    });
-                }
+    submitHandler: function (form) {
+      $.ajaxSetup({
+        headers: {
+          "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+      });
+      $("#send_reg").html("Sending..");
+      $.ajax({
+        url: "http://127.0.0.1:8000/user/register",
+        type: "Post",
+        data: $("#loginForm").serialize(),
+        success: function (response) {
+          $("#send_reg").html("REGISTER");
+          $("#res_message").show();
+          $("#res_message").html(response.msg);
+          $("#msg_div").removeClass("d-none");
+          document.getElementById("loginForm").reset();
+          setTimeout(function () {
+            $("#res_message").hide();
+            $("#msg_div").hide();
+          }, 2000);
+          setInterval('location.reload()', 2000);
+        },
+        /*      error: function (response) {
+          $("#send_reg").html("Register");
+          $("#res_message").show();
+          $("#res_message").html(response.msg);
+          $("#msg_div").removeClass("d-none");
+        }, */
+        error: function (response) {
+            $('#textNameError').text(response.responseJSON.errors.textName);
+            $('#textEmailError').text(response.responseJSON.errors.textEmail);
+            $('#textPhoneError').text(response.responseJSON.errors.textPhone);
+            $('#textPasswordError').text(response.responseJSON.errors.textPassword);
+            $('#textBirtherror').text(response.responseJSON.errors.textBirth);
+            $("#send_reg").html("REGISTER");
+        },
+      });
+    },
   });
 }
 
@@ -148,4 +155,3 @@ $("#loginForm").on("submit", function (event) {
     },
   });
 }); */
-

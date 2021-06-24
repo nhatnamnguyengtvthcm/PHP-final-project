@@ -109,7 +109,7 @@
                             <li><a class="nav-item nav-link" href="#">Vé của tôi</a></li>
 
                             <button type="button" class="btn btn-success btn-rounded">Đăng nhập</button>
-                            <button type="button" class="btn btn-danger btn-rounded">Đăng kí</button>
+                            <button type="button" class="btn btn-danger btn-rounded"><a href="{{ url('Logout') }}">Dang Xuat</a></button>
                             <!-- <li class="nav-item active">
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>

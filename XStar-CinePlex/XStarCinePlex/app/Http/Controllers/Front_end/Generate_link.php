@@ -12,4 +12,9 @@ class Generate_link extends Controller
         return view('layout.master');
 
     }
+
+    //link dan toi dashbord
+    public function dashboard() {
+        return view('admin.dasboard');
+    }
 }

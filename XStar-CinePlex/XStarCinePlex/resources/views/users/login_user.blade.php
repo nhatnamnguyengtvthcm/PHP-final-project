@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
 
@@ -31,19 +30,30 @@
                             <BUtton class="tablinks">REGISTER</BUtton>
                         </div>
                         <div class="sign" id="sign-in">
-                            <form action="" class="form-container" method="POST">
+                            <form action="{{ url('user/login') }}" class="form-container" method="POST">
+                                @if (Session::get('fail'))
+                                    <div class="alert alert-danger">
+                                  {{(Session::get('fail'))}}
+                                    </div>
+                                @endif
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email or phone number</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Email or phone number">
+                                        aria-describedby="emailHelp" placeholder="Email or phone number" name="loginEmail" value="{{ old('loginEmail') }}">
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                         anyone else.</small>
+                                    <span class="text-danger">@error('loginEmail')
+                                        {{ $message }}
+                                    @enderror</span>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Password">
+                                        placeholder="Password" name="loginPassword">
+                                        <span class="text-danger">@error('loginPassword')
+                                            {{ $message }}
+                                        @enderror</span>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block but">LOGIN</button>
                                 <a href="#" id="link-forget">Forgot Your Password?</a>
@@ -51,8 +61,7 @@
                         </div>
                         <div class="register" id="regis">
 
-                            <form action="" class="res-container ko" id="loginForm" name="loginForm"">
-
+                            <form action="{{ url('user/register') }}" class="res-container ko" id="loginForm" name="loginForm"">
                                 @csrf
                                 <div class=" form-group">
                                 <label for="">Name</label>
@@ -60,7 +69,7 @@
                                 <input type="text" class="form-control" name="textName" id="textName"
                                     aria-describedby="helpId" placeholder="Name">
                                 <div class="alert-message" id="textNameError"></div>
-                                {{-- <span class="text-danger">{{ $errors->first('Name') }}</span> --}}
+                        {{--         <span class="text-danger">{{  $errors->first('textName') }}</span> --}}
 
                         </div>
 
@@ -71,6 +80,7 @@
                             <input type="text" class="form-control" name="textPhone" id="textPhone"
                                 aria-describedby="helpId" placeholder="Phone">
                             <div class="alert-message" id="textPhoneError"></div>
+                       {{--      <span class="text-danger">{{ $errors->first('textPhone') }}</span> --}}
 
                         </div>
 
@@ -80,7 +90,9 @@
 
                             <input type="email" class="form-control" name="textEmail" id="textEmail"
                                 aria-describedby="helpId" placeholder="Email">
-                            <div class="alert-message" id="textEmailError"></div>
+                           <div class="alert-message" id="textEmailError"></div>
+
+                    {{--         <span class="text-danger">{{ $errors->first('textEmail')}}</span> --}}
 
                         </div>
 
@@ -90,8 +102,8 @@
 
                             <input type="password" class="form-control" name="textPassword" id="textPassword"
                                 aria-describedby="helpId" placeholder="Password">
-                            <div class="alert-message" id="textPasswordError"></div>
-
+                             <div class="alert-message" id="textPasswordError"></div>
+                         {{--    <span class="text-danger">{{ $errors->first('textPassword') }}</span> --}}
                         </div>
 
                         <div class="form-group">
@@ -100,8 +112,8 @@
 
                             <input type="date" class="form-control" name="textBirth" id="textBirth"
                                 aria-describedby="helpId">
-                            <div class="alert-message" id="textBirth"></div>
-
+                           <div class="alert-message" id="textBirtherror"></div>
+                         {{--    <span class="text-danger">{{ $errors->first('textBirth') }}</span> --}}
                         </div>
 
                         <div class="form-group">
@@ -109,9 +121,9 @@
                             <span>*</span>
                             <div class="f-radio">
 
-                                <input type="radio" name="gender"> Female
-                                <input type="radio" name="gender"> Male
-
+                                <input type="radio" name="gender" value="Female" {{ old('gender') == 'Female' ? 'checked' : '' }}> Female
+                                <input type="radio" name="gender" value="Male" {{ old('gender') == 'Male' ? 'checked' : '' }}> Male
+                          {{--       <span class="text-danger">{{ $errors->first('gender') }}</span> --}}
                             </div>
                         </div>
 
