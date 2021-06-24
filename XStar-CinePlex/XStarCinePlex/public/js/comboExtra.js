@@ -129,7 +129,7 @@ btnOrderSave.addEventListener('click',function(){
   getValueCombo.innerHTML = ItemComboArr.join(" - ");
   var pickingSeatLength = pickingSeat.length;
   var getSumTotalPrice = sumTotalPrice + Number(pickingSeatLength*100000)
-  showSumTotalPrice.value = getSumTotalPrice.toLocaleString();
+  showSumTotalPrice.value = getSumTotalPrice;
  
 })
 
